@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+    <head>
+        
+        <title>register</title>
+        
+        
+    </head>
+       
+    <body align = "center">
+        <h1>Registeration Form</h1>
+        
+                    <label for="fname">First Name:</label>
+                
+                
+                    <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+              
+           <br><br>
+        
+                    <label for="lname">Last Name:</label>
+                 
+                    <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
+                 <br><br>
+                    <label for="email">Email:</label>
+               
+                    <input type="email" id="email" name="email" placeholder="it should contain @,.">
+              <br><br>
+                    <label for="mobile">Mobile:</label>
+                
+                    <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed">
+               <br><br>
+                    <label for="gender" required>Gender:</label>
+            
+                    <input type="radio" id="male" name="gender" value="male"/>Male
+                    <input type="radio" id="female" name="gender" value="female"/>Female
+              <br><br>
+                    <label for="dob">Date Of Birth:</label>
+             
+                    <input type="Date" id="dob" name="dob">
+                <br><br>
+                    <label for="address">Address:</label>
+                
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                 <br><br>
+                    <label for="city">City:</label>
+           
+                    <input type="text" id="city" name="city" maxlength="10">
+                <br><br>
+                    <label for="pincode">Area PIN:</label>
+               
+                    <input type="number" id="pin" name="pin" maxlength="6">
+              <br><br>
+                    <label for="state">State:</label>
+               
+                    <input type="text" id="state" name="state">
+                <br><br>
+                    <label for="qualification" required >Qualification:</label>
+                
+                    <select name="qualification" id="qualification">
+                        <option value=" ">Select Qualification:</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="BTech.">BTech.</option>
+                        <option value="MTech.">MTech.</option>
+                        <option value="MCA">MCA</option>
+                        <option value="BCA">BCA</option>
+                    </select>
+           <br><br>>
+                    <label for="specialization">Specialization:</label>
+                
+                    <input type="checkbox" value="Computer Science">Computer Science<br/>
+                    <input type="checkbox" value="Information Technology">Information Technology<br/>
+                    <input type="checkbox" value="Computer Architecture">Computer Architecture<br/>
+                    <input type="checkbox" value="Tele Communication">Tele Communication<br/>
+                <br><br>
+               <label for="filename">Upload Files:</label>
+                
+                
+                    <input type="file" id="filename" name="Upload Files" placeholder="Attachment">
+        <br><br>
+                    <label for="password">Password:</label>
+           
+                    <input type="password" id="password" name="password" maxlength="8">
+        <br><br>
+                <a href = "login.html"><input type="submit"></a>
+       
+    </body>
+</html>
