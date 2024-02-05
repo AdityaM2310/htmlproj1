@@ -1,87 +1,133 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
 
-    <head>
-        
-        <title>register</title>
-        
-        
-    </head>
-       
-    <body align = "center">
-        <h1>Registeration Form</h1>
-        
-                    <label for="fname">First Name:</label>
-                
-                
-                    <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
-              
-           <br><br>
-        
-                    <label for="lname">Last Name:</label>
-                 
-                    <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
-                 <br><br>
-                    <label for="email">Email:</label>
-               
-                    <input type="email" id="email" name="email" placeholder="it should contain @,.">
-              <br><br>
-                    <label for="mobile">Mobile:</label>
-                
-                    <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed">
-               <br><br>
-                    <label for="gender" required>Gender:</label>
-            
-                    <input type="radio" id="male" name="gender" value="male"/>Male
-                    <input type="radio" id="female" name="gender" value="female"/>Female
-              <br><br>
-                    <label for="dob">Date Of Birth:</label>
-             
-                    <input type="Date" id="dob" name="dob">
-                <br><br>
-                    <label for="address">Address:</label>
-                
-                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
-                 <br><br>
-                    <label for="city">City:</label>
-           
-                    <input type="text" id="city" name="city" maxlength="10">
-                <br><br>
-                    <label for="pincode">Area PIN:</label>
-               
-                    <input type="number" id="pin" name="pin" maxlength="6">
-              <br><br>
-                    <label for="state">State:</label>
-               
-                    <input type="text" id="state" name="state">
-                <br><br>
-                    <label for="qualification" required >Qualification:</label>
-                
-                    <select name="qualification" id="qualification">
-                        <option value=" ">Select Qualification:</option>
-                        <option value="Graduation">Graduation</option>
-                        <option value="BTech.">BTech.</option>
-                        <option value="MTech.">MTech.</option>
-                        <option value="MCA">MCA</option>
-                        <option value="BCA">BCA</option>
-                    </select>
-           <br><br>>
-                    <label for="specialization">Specialization:</label>
-                
-                    <input type="checkbox" value="Computer Science">Computer Science<br/>
-                    <input type="checkbox" value="Information Technology">Information Technology<br/>
-                    <input type="checkbox" value="Computer Architecture">Computer Architecture<br/>
-                    <input type="checkbox" value="Tele Communication">Tele Communication<br/>
-                <br><br>
-               <label for="filename">Upload Files:</label>
-                
-                
-                    <input type="file" id="filename" name="Upload Files" placeholder="Attachment">
-        <br><br>
-                    <label for="password">Password:</label>
-           
-                    <input type="password" id="password" name="password" maxlength="8">
-        <br><br>
-                <a href = "login.html"><input type="submit"></a>
-       
-    </body>
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555555;
+        }
+
+        input,
+        textarea,
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Registration Form</h1>
+
+        <form action="/register" method="post">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter your first name" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" placeholder="Enter your last name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="it should contain @,." required>
+
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed" required>
+
+            <label for="gender" required>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>Male
+            <input type="radio" id="female" name="gender" value="female" required>Female
+
+            <label for="dob">Date Of Birth:</label>
+            <input type="Date" id="dob" name="dob" required>
+
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" cols="30" rows="10" required></textarea>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" maxlength="10" required>
+
+            <label for="pincode">Area PIN:</label>
+            <input type="number" id="pin" name="pin" maxlength="6" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="qualification" required>Qualification:</label>
+            <select name="qualification" id="qualification" required>
+                <option value=" ">Select Qualification:</option>
+                <option value="Graduation">Graduation</option>
+                <option value="BTech.">BTech.</option>
+                <option value="MTech.">MTech.</option>
+                <option value="MCA">MCA</option>
+                <option value="BCA">BCA</option>
+            </select>
+
+            <label for="specialization">Specialization:</label>
+            <input type="checkbox" value="Computer Science">Computer Science<br>
+            <input type="checkbox" value="Information Technology">Information Technology<br>
+            <input type="checkbox" value="Computer Architecture">Computer Architecture<br>
+            <input type="checkbox" value="Tele Communication">Tele Communication<br>
+
+            <label for="filename">Upload Files:</label>
+            <input type="file" id="filename" name="Upload Files" placeholder="Attachment">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" maxlength="8" required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+</body>
 </html>
